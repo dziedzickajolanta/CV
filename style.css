@@ -296,17 +296,17 @@ h3 {
 }
 .resume .func .skills-prog ul li .skills-bar {
   background: #cdcdcd;
-  height: 2px;
+  height: 4px; /* Zwiększ z 2px */
   width: calc(100% - 120px);
   position: relative;
   border-radius: 2px;
 }
 .resume .func .skills-prog ul li .skills-bar .bar {
   position: absolute;
-  top: -1px;
-  height: 4px;
+  top: 0; /* Zmień z -1px */
+  height: 100%;
   background: #8d9e78;
-  box-shadow: 0 0 0 #8d9e78;
+  width: 0; /* JS to wypełni */
   border-radius: 5px;
 }
 .resume .func .skills-soft ul {
@@ -469,3 +469,4 @@ h3 {
 .item-description li {
   margin-bottom: 5px;
 }
+
