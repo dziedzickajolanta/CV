@@ -7,17 +7,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <style>
-        /* Dodatkowe style dla wyjustowania konkretnych sekcji */
+        /* NAPRAWA WYJUSTOWANIA I NAKŁADANIA SIĘ TEKSTU */
+        
         .about p, 
-        .work-item .item-description, 
-        .edu-item .item-description {
-            text-align: justify;
-            hyphens: auto; /* Automatyczne dzielenie wyrazów dla lepszego efektu */
+        .item-description {
+            text-align: justify !important;
+            text-justify: inter-word; /* Poprawia rozkład słów */
+            hyphens: auto;
+            line-height: 1.5; /* Zwiększa odstępy między liniami, żeby tekst był czytelniejszy */
+            margin-bottom: 15px; /* Zapobiega nachodzeniu na kolejne elementy */
+            display: block;
+            height: auto !important; /* Wymusza, by kontener rósł wraz z tekstem */
+        }
+
+        .work-item, .edu-item {
+            margin-bottom: 25px; /* Odstępy między kolejnymi wpisami w karierze/edukacji */
+            height: auto !important;
+        }
+
+        .item-header {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Zapobiega ściskaniu nagłówków na małych ekranach */
+        }
+
+        /* Dodatkowa poprawka dla sekcji "O mnie" w kolumnie bocznej */
+        .about {
+            padding-bottom: 20px;
         }
     </style>
 </head>
 <body>
+
 <div class="resume">
   <div class="base">
     <div class="profile">
@@ -27,10 +52,12 @@
         <small class="job">Aspiring Software Developer</small>
       </div>
     </div>
+    
     <div class="about">
       <h3>O mnie</h3>
       <p>Studentka III roku Cyberbezpieczenstwa. Obecnie technik software Apple. Poszukuje pierwszej roli zawodowej w programowaniu :)</p>
     </div>
+
     <div class="contact">
       <h3>Kontakt</h3>
       <div class="call"><i class="fa fa-phone"></i><span>880 072 037</span></div>
@@ -50,7 +77,7 @@
       
       <div class="work-item">
         <div class="item-header">
-          <span>Technik Software Apple</span>
+          <strong>Technik Software Apple</strong>
           <small>2022 - Obecnie</small>
         </div>
         <p class="item-description">
@@ -60,7 +87,7 @@
 
       <div class="work-item">
         <div class="item-header">
-          <span>Praktyka zawodowa</span>
+          <strong>Praktyka zawodowa</strong>
           <small>PKP PLK S.A.</small>
         </div>
         <p class="item-description">
@@ -73,7 +100,7 @@
       <h3><i class="fa fa-graduation-cap"></i>Edukacja</h3>
       <div class="edu-item">
         <div class="item-header">
-          <span>Cyberbezpieczenstwo</span>
+          <strong>Cyberbezpieczenstwo</strong>
           <small>2023 - Obecnie</small>
         </div>
         <p class="item-description">
